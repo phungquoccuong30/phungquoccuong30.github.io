@@ -30,7 +30,7 @@
             box-shadow: 0 4px 6px rgba(0,0,0,0.3); 
             transition: transform 0.3s ease;
         }
-        .section:hover { transform: translateY(-5px); }
+        .section:hover { transform: translateY(-3px); }
         h2 { color: #4facfe; border-bottom: 2px solid #333; padding-bottom: 10px; margin-top: 0;}
         ul { list-style-type: none; padding: 0; }
         li { 
@@ -40,6 +40,51 @@
             border-left: 4px solid #4facfe; 
             border-radius: 0 4px 4px 0;
         }
+        
+        /* CSS cho khu vực Dự án */
+        .project-card {
+            background: #252525;
+            border: 1px solid #333;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: border-color 0.3s;
+        }
+        .project-card:hover {
+            border-color: #4facfe;
+        }
+        .project-info h3 { 
+            margin: 0 0 5px 0; 
+            color: #4facfe; 
+            font-size: 1.2em;
+        }
+        .project-info p { 
+            margin: 0; 
+            font-size: 0.9em; 
+            color: #bbb; 
+        }
+        .view-btn {
+            background: transparent;
+            border: 1px solid #4facfe;
+            color: #4facfe;
+            padding: 8px 16px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.85em;
+            font-weight: bold;
+            white-space: nowrap;
+            margin-left: 15px;
+            transition: all 0.3s ease;
+        }
+        .view-btn:hover {
+            background: #4facfe;
+            color: #121212;
+        }
+
+        /* Nút liên hệ */
         a.contact-btn {
             display: inline-block;
             background-color: #4facfe;
@@ -49,6 +94,7 @@
             border-radius: 5px;
             font-weight: bold;
             margin-top: 10px;
+            transition: background-color 0.3s;
         }
         a.contact-btn:hover { background-color: #388e3c; color: white;}
     </style>
@@ -61,29 +107,64 @@
     </header>
 
     <div class="container">
+        <!-- Về Tôi -->
         <div class="section">
             <h2>Về Tôi</h2>
-            <p>Chào mừng bạn đến với không gian cá nhân của tôi. Tôi là một kỹ sư có chuyên môn sâu trong việc quy hoạch và thiết kế hạ tầng giao thông. Tôi thích đưa ra các giải pháp kỹ thuật tối ưu và áp dụng công nghệ mới nhất vào công việc thực tiễn.</p>
+            <p>Chào mừng bạn đến với không gian cá nhân của tôi. Tôi là một kỹ sư có chuyên môn sâu trong việc quy hoạch, thẩm định và thiết kế hạ tầng giao thông. Tôi luôn hướng tới việc đưa ra các giải pháp kỹ thuật tối ưu, đảm bảo tính khả thi và thẩm mỹ cho từng tuyến đường, từng công trình.</p>
         </div>
 
+        <!-- Kỹ Năng -->
         <div class="section">
             <h2>Kỹ Năng & Lĩnh Vực Chuyên Môn</h2>
             <ul>
-                <li>Thiết kế trắc dọc, trắc ngang và bình đồ tuyến chuyên sâu.</li>
-                <li>Mô phỏng và khai triển bản vẽ bằng AutoCAD, Civil 3D & Subassembly Composer.</li>
-                <li>Lập hồ sơ kỹ thuật, báo cáo thẩm định dự án giao thông thủy lợi.</li>
+                <li>Thiết kế chi tiết trắc dọc, trắc ngang và bình đồ tuyến giao thông.</li>
+                <li>Xử lý bình đồ, khai triển bản vẽ bằng AutoCAD & Civil 3D.</li>
+                <li>Lập trình và tùy biến mặt cắt ngang đường với Subassembly Composer.</li>
+                <li>Lập hồ sơ thiết kế kỹ thuật, tham gia công tác báo cáo thẩm định dự án.</li>
             </ul>
         </div>
 
+        <!-- Dự Án -->
         <div class="section">
-            <h2>Sở Thích Cá Nhân</h2>
-            <p>Khi không làm việc với các bản vẽ kỹ thuật, tôi dành thời gian cho đam mê nghiên cứu, lắp ráp các dàn PC Workstation cấu hình khủng với hệ thống tản nhiệt nước cao cấp. Ngoài ra, tôi cũng yêu thích nhiếp ảnh mang phong cách màu cinematic hơi hướng hoài cổ và theo dõi các bộ phim truyền hình dã sử có chiều sâu.</p>
+            <h2>Sản Phẩm & Dự Án Nổi Bật</h2>
+            
+            <div class="project-card">
+                <div class="project-info">
+                    <h3>Dự án Đầu tư Xây dựng Đường tỉnh 877C</h3>
+                    <p>Tham gia thiết kế hạ tầng kỹ thuật, xử lý trắc dọc, trắc ngang và hoàn thiện hồ sơ thẩm định.</p>
+                </div>
+                <!-- Bạn thay chữ LINK_CUA_BAN thành link Google Drive thực tế -->
+                <a href="LINK_CUA_BAN" class="view-btn" target="_blank">Xem bản vẽ</a>
+            </div>
+
+            <div class="project-card">
+                <div class="project-info">
+                    <h3>Mô phỏng Nút Giao & Hạ Tầng Civil 3D</h3>
+                    <p>Ứng dụng Subassembly Composer để giải quyết các cấu kiện phức tạp trên bình đồ tuyến.</p>
+                </div>
+                <a href="LINK_CUA_BAN" class="view-btn" target="_blank">Xem chi tiết</a>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-info">
+                    <h3>Quy hoạch Công trình Giao thông (Nhơn Trạch - Quận 9)</h3>
+                    <p>Nghiên cứu định hướng phát triển hạ tầng và kết nối giao thông khu vực.</p>
+                </div>
+                <a href="LINK_CUA_BAN" class="view-btn" target="_blank">Xem báo cáo</a>
+            </div>
         </div>
 
+        <!-- Sở Thích -->
+        <div class="section">
+            <h2>Sở Thích Cá Nhân</h2>
+                    </div>
+
+        <!-- Liên Hệ -->
         <div class="section">
             <h2>Liên Hệ</h2>
-            <p>Sẵn sàng kết nối để thảo luận về các dự án hạ tầng hoặc đơn giản là giao lưu chia sẻ đam mê công nghệ.</p>
-            <a href="mailto:email-cua-ban@gmail.com" class="contact-btn">Gửi Email Cho Tôi</a>
+            <p>Sẵn sàng kết nối để thảo luận về các dự án hạ tầng, giao lưu kỹ thuật Civil 3D hoặc chia sẻ đam mê build PC.</p>
+            <!-- Thay bằng email thật của bạn -->
+            <a href="mailto:tuitencuong30@gmail.com" class="contact-btn">Gửi Email Cho Tôi</a>
         </div>
     </div>
 
